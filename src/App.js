@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import Home from './views/Home'
 import "./App.css";
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-      
+          {/* Add a route for the home page */}
+          <Route path="/" element={<Home />} />
           {/* Add a catch-all route for handling errors */}
           <Route path="*" element={<NotFound />} />
         </Routes>
